@@ -120,11 +120,6 @@ h1 {
   position: fixed;
   top: 80px;
   left: 20px;
-  border-radius: 100000px;
-  background-color: rgba(0, 0, 255, 0.172);
-  box-shadow: 0 0 20px 5px rgba(0, 0, 255, 0.172),
-    0 0 20px 5px rgba(0, 0, 255, 0), 0 0 50px 20px rgba(0, 0, 255, 0.021),
-    0 0 20px 5px rgba(0, 0, 255, 0.114);
 }
 
 .redes2 {
