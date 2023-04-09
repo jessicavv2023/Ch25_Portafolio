@@ -1,13 +1,23 @@
 body {
   background-color: #f8f8f8;
 }
+/* espacio entre pàlabras en movimiento */
+.word:not(:last-child) {
+  margin-right: 1em;
+}
 
 /*parte del menu que dice jessi */
 h5 {
   color: #a5b8fb;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Chivo Mono", monospace;
 
   font-size: 39px;
+}
+h6 {
+  color: #a5b8fb;
+  font-family: "Chivo Mono", monospace;
+
+  font-size: 23px;
 }
 .titulo2 {
   color: #a5b8fb;
@@ -17,10 +27,10 @@ h5 {
 }
 h1 {
   color: #a5b8fb;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Chivo Mono", monospace;
   text-align: center;
   font-size: 99px;
-  text-shadow: 10px 5px 29px #a5b8fb;
+  text-shadow: 10px 5px 29px #8d9fe0;
 }
 
 .boton {
@@ -73,8 +83,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Chivo Mono", monospace;
 }
 .dropdown-menu {
   background-color: transparent;
@@ -116,9 +125,9 @@ h1 {
   margin: auto;
   display: flex;
   width: 30px;
-  height: 30px;
+  height: 34px;
   position: fixed;
-  top: 80px;
+  top: 350px;
   left: 20px;
 }
 
@@ -126,35 +135,153 @@ h1 {
   margin: auto;
   display: flex;
   width: 29px;
-  height: 29px;
+  height: 34px;
   position: fixed;
-  top: 120px;
+  top: 390px;
   left: 20px;
 }
 .redes3 {
   margin: auto;
   display: flex;
   width: 29px;
-  height: 29px;
+  height: 34px;
   position: fixed;
-  top: 160px;
+  top: 430px;
   left: 20px;
 }
 .redes4 {
   margin: auto;
   display: flex;
   width: 29px;
-  height: 29px;
+  height: 34px;
   position: fixed;
-  top: 200px;
+  top: 470px;
   left: 20px;
 }
 .redes5 {
   margin: auto;
   display: flex;
   width: 29px;
-  height: 29px;
+  height: 34px;
   position: fixed;
-  top: 240px;
+  top: 510px;
   left: 20px;
+}
+/* // animacion de letras  */
+
+h6 {
+  position: absolute;
+  top: 125%;
+  left: 45%;
+  transform: translate(-49%, -90%);
+}
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#movable,
+h6 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: transparent;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30em;
+  }
+}
+/* //modo oscuro  */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #eee;
+}
+#modo-btn {
+  position: fixed;
+  display: inline-block;
+  border: none;
+  background-color: #303030; /* Agrega el color de fondo al botón */
+  color: white;
+  padding: 15px 29px;
+  top: -2%;
+  left: -34px;
+  border-radius: 20px;
+  z-index: 9999;
+}
+
+#modo-btn .circle {
+  position: absolute;
+  margin-left: -10px; /* Agrega un margen negativo para compensar el ancho del círculo */
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#modo-btn:hover {
+  background-color: #a5b8fb; /* Cambia el color de fondo del botón al pasar el cursor */
+}
+
+#modo-btn:hover .circle {
+  background-color: #ccd8e3; /* Cambia el color de fondo del círculo al pasar el cursor */
+  transform: translateX(100%);
+}
+button {
+  margin: 50px;
+}
+/* banda de letras  */
+/* Define la grilla */
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-auto-rows: 385px;
+  background-color: #ccd8e3;
+  top: 710px;
+  left: -2px;
+}
+
+.letter-container {
+  color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Chivo Mono", monospace;
+  font-size: 122px;
+  animation: move-right 30s linear infinite;
+}
+.letter-container {
+  color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Chivo Mono", monospace;
+  font-size: 122px;
+  animation: move-right 30s linear infinite alternate; /* added "alternate" */
+}
+
+@keyframes move-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-3000px, 0, 0);
+  }
 }
