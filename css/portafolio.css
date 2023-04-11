@@ -23,14 +23,13 @@ h6 {
   color: #a5b8fb;
   font-family: "Trebuchet MS", sans-serif;
 
-  font-size: 19px;
+  font-size: 22px;
 }
 h1 {
   color: #a5b8fb;
   font-family: "Chivo Mono", monospace;
   text-align: center;
-  font-size: 99px;
-  text-shadow: 10px 5px 29px #8d9fe0;
+  font-size: 6vw;
 }
 
 .boton {
@@ -167,14 +166,34 @@ h1 {
   top: 510px;
   left: 20px;
 }
+.vertical-text {
+  position: relative;
+  writing-mode: vertical-lr; /* Texto vertical de izquierda a derecha */
+  color: #a5b8fb;
+  font-family: "Chivo Mono";
+  font-style: Thin 100;
+  top: 26rem;
+  left: -1rem;
+  transform: rotate(180deg);
+  font-size: 2rem;
+}
+
 /* // animacion de letras  */
 
 h6 {
   position: absolute;
   top: 125%;
-  left: 45%;
-  transform: translate(-49%, -90%);
+  left: 49%;
+  font-style: Italic;
 }
+
+/* .proyectos {
+  position: absolute;
+  top: 205%;
+  left: 49%;
+  transform: translate(-49%, -90%);
+  font-style: Italic;
+} */
 #container {
   position: absolute;
   top: 50%;
@@ -182,7 +201,8 @@ h6 {
   transform: translate(-50%, -50%);
 }
 #movable,
-h6 {
+h6,
+.proyectos {
   overflow: hidden;
   white-space: nowrap;
   border-right: transparent;
@@ -216,7 +236,7 @@ body {
   background-color: #303030; /* Agrega el color de fondo al botón */
   color: white;
   padding: 15px 29px;
-  top: -2%;
+  top: -1%;
   left: -34px;
   border-radius: 20px;
   z-index: 9999;
@@ -250,9 +270,9 @@ button {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-auto-rows: 385px;
+  grid-auto-rows: calc(50vh - 2px);
   background-color: #ccd8e3;
-  top: 710px;
+  top: 904px;
   left: -2px;
 }
 
@@ -273,7 +293,7 @@ button {
   align-items: center;
   overflow: hidden;
   font-family: "Chivo Mono", monospace;
-  font-size: 122px;
+  font-size: 135px;
   animation: move-right 30s linear infinite alternate; /* added "alternate" */
 }
 
@@ -284,4 +304,63 @@ button {
   100% {
     transform: translate3d(-3000px, 0, 0);
   }
+}
+
+/* cards  */
+
+.card-container {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ajustar el espacio entre cada tarjeta */
+}
+
+.card {
+  align-items: flex-end;
+  background-color: transparent;
+  color: #a5b8fb;
+  border-radius: 0 30px 0 30px;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin-bottom: 0.2rem; /* Agregar un espacio entre cada tarjeta */
+  border-color: #a5b8fb;
+  border-width: 2px;
+  border-color: var(--bs-border-color- #a5b8fb);
+  top: 37rem;
+  left: -23rem;
+}
+
+.card:hover {
+  background-color: #a5b8fb4d;
+}
+
+.card:active {
+  background-color: #ccd8e3;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* letra de propyectos  */
+.proyectos,
+.proyectos {
+  position: relative;
+  font-size: 39px;
+  color: #a5b8fb;
+  font-family: "Chivo Mono", monospace;
+
+  top: 16rem;
+  left: -4rem;
 }
