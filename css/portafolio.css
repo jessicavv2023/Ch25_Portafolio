@@ -180,13 +180,6 @@ h1 {
 
 /* // animacion de letras  */
 
-h6 {
-  position: absolute;
-  top: 125%;
-  left: 49%;
-  font-style: Italic;
-}
-
 /* .proyectos {
   position: absolute;
   top: 205%;
@@ -200,9 +193,7 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#movable,
-h6,
-.proyectos {
+#movable {
   overflow: hidden;
   white-space: nowrap;
   border-right: transparent;
@@ -294,7 +285,7 @@ button {
   overflow: hidden;
   font-family: "Chivo Mono", monospace;
   font-size: 135px;
-  animation: move-right 30s linear infinite alternate; /* added "alternate" */
+  animation: move-right 30s linear infinite alternate;
 }
 
 @keyframes move-right {
